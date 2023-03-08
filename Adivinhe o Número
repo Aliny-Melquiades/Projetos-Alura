@@ -1,0 +1,97 @@
+Parte HTML
+
+<div class="container">
+  <h1 class="page-title">
+    Número Secreto
+  </h1>
+  <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+</div>
+<a href="https://alura.com.br/" target="_blank">
+  <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+  <img src="https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Ilustra%C3%A7%C3%A3o-c%C3%A9rebro+1.png">
+</a>
+
+Parte CSS
+
+body {
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  background-image: url("https://th.bing.com/th/id/R.e9e82168b6a208364730cce18df2540b?rik=X%2bbhRMvGwRFpwg&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f7%2f7%2fa%2f75752.jpg&ehk=UFdozLS3E9VdoTApAJ%2bNA3N9mH694cO48rnNefJOIwY%3d&risl=&pid=ImgRaw&r=0");
+  background-color: #000000;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.page-title {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 200px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+body > img {
+  margin: 0 10px;
+}
+
+img {
+  max-height: 350px;
+}
+
+
+Parte JavaScript
+
+var númeroSecreto = parseInt(Math.random() * 1001) + 1
+
+var tentativas = 0
+var tentativasMáximas = 10
+
+alert("Vamos adivinhar o número secreto?")
+
+while(chute != númeroSecreto) {
+tentativas +=1
+var tentativasRestantes = tentativasMáximas - tentativas
+  
+var chute = prompt("Digite um número entre 1 e 1000.")
+  
+//se o chute for igual ao número secreto
+if (chute == númeroSecreto) {
+alert("Parabéns, você acertou! \n\nO número secreto era " + númeroSecreto + "\n\nVocê usou um total de " + tentativas + " tentativas!")
+  } 
+
+//se o chute for maior que o número secreto
+else if (chute > númeroSecreto) {
+alert("Errou... o número secreto é menor que " + chute + "!\n\nVocê tem " + tentativasRestantes + " tentativas restantes.\n")
+  } 
+
+//se o chute for maior que o número secreto
+else if (chute < númeroSecreto) {
+alert("Errou... o número secreto é maior que " + chute + "!\n\nVocê tem " + tentativasRestantes + " tentativas restantes.\n")
+  } 
+  
+//se as tentativas acabarem
+if (tentativasRestantes == 0) {
+alert("Infelizmente, suas tentativas se esgotaram. \n\nO número secreto era: " + númeroSecreto)
+    break
+  }
+}
