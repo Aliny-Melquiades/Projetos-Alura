@@ -1,0 +1,111 @@
+Parte HTML
+
+<html>
+
+<head>
+  <title>
+    Imersão Dev
+  </title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="page-title">
+      AluraLibrary
+    </h1>
+    <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+    <p class="page-subtitle">
+      Qual seu livro favorito?
+    </p>
+    <div class="form-wrapper">
+      <input type="text" id="livro" name="livro" placeholder="Insira endereço de imagem">
+      <button onClick="adicionarLivro()">Adicionar Livro</button>
+    </div>
+  </div>
+  <div id="listaLivros"></div>
+  <a href="https://alura.com.br/" target="_blank">
+    <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+  </a>
+</body>
+
+</html>
+
+Parte CSS
+
+body {
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  background-image: url("https://th.bing.com/th/id/R.572247321fe0bfd3f7b8247666b3a793?rik=u1r%2fYhs2Vb47lw&riu=http%3a%2f%2fi.imgur.com%2fh6w0M.jpg&ehk=GPisxzPPuqrMUtpgXyrQj819PAPU8UJbg08DYlWCsJQ%3d&risl=&pid=ImgRaw&r=0");
+  background-color: #000000;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.page-title {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 200px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#listaLivros img {
+  margin: 10px;
+  max-height: 250px;
+}
+
+.form-wrapper {
+  margin: 0 0 15px;
+}
+
+.form-wrapper input {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 15px;
+}
+
+.form-wrapper button {
+  border: 0;
+  color: #ffffff;
+  background: #da1e26;
+  font-weight: bold;
+  padding: 15px 20px;
+  font-size: 16px;
+  borde-radius: 4px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-wrapper button:hover {
+  opacity: 0.8;
+}
+
+Parte JavaScript
+
+function adicionarLivro() {
+var livroFavorito = document.getElementById('livro').value
+var elementoListaLivros = document.getElementById('listaLivros')
+
+elementoListaLivros.innerHTML = elementoListaLivros.innerHTML + '<img src=' + livroFavorito + '>'
+ document.getElementById('livro').value = ''
+}
