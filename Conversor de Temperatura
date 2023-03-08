@@ -1,0 +1,70 @@
+Parte HTML 
+
+<div class="container">
+  <h1 class="page-title">
+    Conversor de Temperatura
+  </h1>
+  <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+</div>
+<a href="https://codepen.io/lyn_morgan/pen/ZEjMLzQ?editors=1000" target="_blank">
+  <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+  <img src="https://th.bing.com/th/id/R.0577dcc5deea5bd9845d679d879c699a?rik=57SDsyYJA499jw&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2faTq%2f6kn%2faTq6knkEc.png&ehk=Oq3wGa32VWsroOcwCVEM95fZ5R2WHyubF8qFfuDLNSg%3d&risl=&pid=ImgRaw&r=0">
+</a>
+
+Parte CSS
+
+body {
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  background-image: url("https://www.atlasdasaude.pt/sites/default/files/field/image/praia_mar_calor_verao_temperatura_elevada_termometro_ss_15.jpg");
+  background-color: #000000;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.page-title {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 200px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+body > img {
+  margin: 0 10px;
+}
+
+img {
+  max-height: 250px;
+}
+
+Parte JavaScript
+
+var valorCelsius = 36;
+var valorFahrenheit = valorCelsius * 1.8 + 32;
+var valorKelvin = valorCelsius + 273.15;
+
+var nome = prompt("Qual seu nome?");
+var valor = prompt(nome + ", O valor é de " + valorFahrenheit + " ºF");
+alert(nome + ", o valor é de " + valorKelvin + " K");
+
