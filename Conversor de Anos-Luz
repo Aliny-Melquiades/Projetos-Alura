@@ -1,0 +1,71 @@
+Parte HTML 
+
+<div class="container">
+  <h1 class="page-title">
+    Conversor de Anos-Luz
+  </h1>
+  <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+</div>
+<a href="https://codepen.io/lyn_morgan/pen/ZEjMLzQ?editors=1000" target="_blank">
+  <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+  <img src="">
+</a>
+
+Parte CSS
+
+body {
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  background-image: url("https://veja.abril.com.br/wp-content/uploads/2016/07/ciencia-alinhamento-planetas.jpg");
+  background-color: #000000;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.page-title {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 200px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+body > img {
+  margin: 0 10px;
+}
+
+img {
+  max-height: 250px;
+}
+
+Parte JavaScript
+
+var valorEmAnoLuz = 2;
+var valorEmKm = 94607304725808;
+
+var valorCorrespondente = valorEmAnoLuz * valorEmKm;
+
+var nome = prompt("Qual seu nome?");
+var valor = prompt(nome + ", Ano-luz é, basicamente, a distância que a luz percorre em um ano. Segundo a NASA, a luz leva um segundo para atravessar 300 mil quilômetros. ");
+alert(nome + ", o valor é de " + valorCorrespondente + " Km");
+
