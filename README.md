@@ -1,3 +1,3 @@
-# Projetos Imersão Dev Alura
+#  Alura Dev Immersion Projects
 
-Projetos simples feitos no evento Imersão Dev da Alura.
+Simple projects made at Alura's Imersão Dev event.
